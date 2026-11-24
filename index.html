@@ -834,7 +834,10 @@ main{padding-block:40px 120px;min-width:0;display:flex;flex-direction:column;gap
   var inArtifact=!!(window.claude&&claude.use);
   function fallbackMsg(){dlSay('이 화면에서는 바로 받을 수 없어요. 강사에게 실습 파일을 받아 주세요.')}
   if(inArtifact){
-    claude.use('downloads').then(function(d){dlApi=d;if(!d){fallbackMsg();return}dlBtn.disabled=false;dlSay('')},fallbackMsg);
+    /* claude.ai 안에서는 파일이 커서 GitHub Pages의 같은 파일로 연결 */
+    var ext=document.createElement('a');ext.className='btn pri';ext.id='dlLink';ext.href='https://yeuuuuuuun.github.io/1124/'+ZIP_PATH;ext.target='_blank';ext.rel='noopener';ext.textContent=dlBtn.textContent;
+    dlBtn.replaceWith(ext);dlSay('새 탭에서 다운로드가 시작돼요.');
+    ext.addEventListener('click',function(){var c=document.getElementById('pp-1');if(!c.checked){c.checked=true;c.dispatchEvent(new Event('change'))}});
   } else {
     /* 일반 웹사이트(GitHub Pages): 평범한 다운로드 링크 */
     var a=document.createElement('a');a.className='btn pri';a.id='dlLink';a.href=ZIP_PATH;a.setAttribute('download',ZIP_NAME);a.textContent=dlBtn.textContent;
