@@ -218,6 +218,7 @@ main{padding-block:40px 120px;min-width:0;display:flex;flex-direction:column;gap
 .merge .arrow{font-size:1.6rem;color:var(--accent);line-height:1}
 .merge .out{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:900;color:var(--accent)}
 .cl-step{display:flex;flex-direction:column;gap:6px}
+.cool-steps .shot img{max-height:34vh}
 .cl-step span{color:var(--c-muted);font-size:.92rem}
 /* 캡처 이미지 */
 .shot{margin:0;border-radius:var(--r-s);overflow:hidden;border:1px solid var(--line-strong);background:#FFFFFF;cursor:zoom-in;max-width:100%}
@@ -305,14 +306,14 @@ main{padding-block:40px 120px;min-width:0;display:flex;flex-direction:column;gap
 <main>
 <!-- 표지 -->
 <header class="hero" id="top">
-  <div class="meta">교내 AI 업무 경감 연수 · <span class="blank">날짜</span> · <span class="blank">학교 · 강사</span></div>
+  <div class="meta">교내 AI 업무 경감 연수 · 2026. 11. 24. · 이예운</div>
   <h1>나는 기획하고,<br><em>AI는 일한다</em></h1>
   <p class="lead">오늘 여러분도 AI 직원을 한 명 뽑습니다. 실습 문장은 복사해서 그대로 붙여넣고, 연수가 끝난 뒤에는 프롬프트 모음과 복습 퀴즈로 다시 정리해 보세요.</p>
   <div class="legend"><span class="tag gpt">GPT 실습</span>직접 따라 해요 <span class="tag cl">클로드 시연</span>강사 화면을 지켜봐요 <span class="tag show">보여주기</span>사례를 봐요</div>
   <div class="cta"><a class="btn pri" href="#get-files">실습 파일 받기</a><a class="btn" href="#prompts">프롬프트 모음</a><a class="btn" href="#review">복습 퀴즈</a></div>
   <div class="jump">
     <a href="#step1"><span class="k">1단계 · 실습 1~3</span><b>내 PC에서 일하게 하기</b><span>누가기록 · 수업 지도안 · 공문 정리</span></a>
-    <a href="#step2"><span class="k">2단계 · 실습 4~5</span><b>업무 매뉴얼로 반복 작업하기</b><span>메신저에서 할 일 정리 · 주간 브리핑 예약</span></a>
+    <a href="#step2"><span class="k">2단계 · 실습 4~5</span><b>업무 매뉴얼로 반복 작업하기</b><span>메시지로 일정 정리 · 주간 브리핑 예약</span></a>
     <a href="#step3"><span class="k">3단계</span><b>AI로 필요한 도구 만들기</b><span>수업용 웹앱 사례</span></a>
   </div>
 </header>
@@ -567,17 +568,17 @@ main{padding-block:40px 120px;min-width:0;display:flex;flex-direction:column;gap
   <div class="ch-head"><span class="k">STEP 2</span><h2>업무 매뉴얼로 반복 작업하기</h2><p>프로젝트에 기준을 저장하고, 예약으로 반복 실행해요. 매번 설명하지 않아도 같은 기준으로 일하는 직원이 됩니다.</p></div>
 
   <div class="block gpt">
-    <header><span class="tag gpt">GPT 실습</span><h3>실습 4 · 쿨메신저에서 할 일 찾기</h3><p class="sub">쿨메신저에서 내가 할 일만 골라내요.</p></header>
-    <ol class="steps">
-      <li><span><b>프로젝트 만들기</b></span></li>
-      <li><span><b>업무 기준(매뉴얼) 넣기</b></span></li>
-      <li><span><b>폴더 권한 허용하기</b></span></li>
-      <li><span><b>일 시키기</b></span></li>
-    </ol>
-    <div class="prompt" data-title="쿨메신저 정리 기준"><p class="prompt-text">이 프로젝트에서는 연결된 폴더의 메시지를 읽고, 내가 할 일 / 마감일 / 제출할 곳 / 참고만 할 것으로 나눠 할 일 목록 표로 정리해. 마감이 가까운 순서로.</p><div class="prompt-foot"><small>프로젝트 지침에 붙여넣기</small><button class="copy">복사</button></div></div>
-    <p>다음부터는 한마디면 끝이에요.</p>
-    <div class="prompt" data-title="메시지 정리 한마디"><p class="prompt-text">오늘 메시지 정리해 줘.</p><div class="prompt-foot"><small>기준을 넣은 프로젝트 안에서</small><button class="copy">복사</button></div></div>
-    <div class="tip"><b>팁</b><span>기준을 한 번 저장해 두면 매번 설명하지 않아도 같은 기준으로 일해요. 이것이 '스킬'의 개념이에요.</span></div>
+    <header><span class="tag gpt">GPT 실습</span><h3>실습 4 · 메시지로 일정 정리하기</h3><p class="sub">쿨메신저 메시지함이 내 PC 어디에 있는지 확인하고, 가상 메시지함으로 6학년 부장의 11~12월 업무를 정리해요.</p></header>
+    <p><b>메시지함 폴더 찾기</b></p>
+    <div class="row3 cool-steps">
+      <div class="cl-step"><b>1. 로그인 창에서 폴더 아이콘 찾기</b><span>로그아웃 상태에서 시작해요. 로그인 창 오른쪽 위, 물음표 왼쪽의 폴더 아이콘을 눌러요.</span><figure class="shot narrow"><img src="img/cool-login.png" alt="쿨메신저 로그인 창 오른쪽 위의 폴더 아이콘" loading="lazy"></figure></div>
+      <div class="cl-step"><b>2. '폴더 열기' 누르기</b><span>'메시지함 저장 경로 안내' 창에서 오른쪽의 '폴더 열기'를 눌러요.</span><figure class="shot"><img src="img/cool-path.png" alt="메시지함 저장 경로 안내 창의 폴더 열기 단추" loading="lazy"></figure></div>
+      <div class="cl-step"><b>3. Memo 폴더 확인하기</b><span>파일 탐색기에서 메시지함 파일(.udb)이 있는 Memo 폴더를 확인해요.</span><figure class="shot"><img src="img/cool-memo.png" alt="파일 탐색기의 CoolMessenger Memo 폴더" loading="lazy"></figure></div>
+    </div>
+    <div class="tip"><b>주의</b><span>실제 메시지함은 위치만 확인해요. 실습에는 나눠 드린 가상 .udb 파일만 사용하세요.</span></div>
+    <p><b>6학년 부장의 11~12월 업무 찾기</b> · Work에서 가상 .udb 파일이 들어 있는 실습 폴더를 열고 아래 문장을 입력하세요.</p>
+    <div class="prompt" data-title="6학년 부장 11~12월 업무"><p class="prompt-text">나는 6학년 부장교사야. 실습용_쿨메신저_6학년부장.udb의 메시지를 읽고 11~12월 업무를 정리해 줘.</p><div class="prompt-foot"><small>Work 입력창에 붙여넣기</small><button class="copy">복사</button></div></div>
+    <div class="tip"><b>결과 확인</b><span>변경된 일정이나 놓치기 쉬운 마감 1개를 원문에서 찾아보세요.</span></div>
   </div>
 
   <div class="block">
@@ -695,7 +696,7 @@ main{padding-block:40px 120px;min-width:0;display:flex;flex-direction:column;gap
   <div class="recap">
     <div><b>도입</b><span>채팅은 뇌만 있는 AI, 에이전트는 손과 발이 생긴 AI. 학생은 번호로, 민감 문서는 올리지 않기.</span></div>
     <div><b>1단계</b><span>내 PC에서 일하게 하기: 누가기록 → 지도안 → 공문 정리. 양식을 주고, 계획 먼저 승인 후 실행.</span></div>
-    <div><b>2단계</b><span>프로젝트에 기준을 저장하면 한마디로 같은 기준의 일. 한 번 해 보고 좋으면 예약으로 반복 실행.</span></div>
+    <div><b>2단계</b><span>메시지함을 읽혀 내 업무와 마감을 정리. 한 번 해 보고 좋으면 예약으로 반복 실행.</span></div>
     <div><b>3단계</b><span>코드를 몰라도 말로 도구를 만든다.</span></div>
     <div><b>적용하기</b><span>무엇을 주고 → 무엇을 판단하게 하고 → 어떤 결과를 받을지 정해 내 첫 업무를 맡긴다.</span></div>
   </div>
@@ -796,7 +797,7 @@ main{padding-block:40px 120px;min-width:0;display:flex;flex-direction:column;gap
     ['1단계','지도안을 만들 때 학교 양식을 주면 좋은 점은?','우리 학교 양식 그대로 만들어 줘서 후보정이 줄고, AI가 업무를 더 많이 떼어 가요'],
     ['1단계','지도안 만들기 흐름 4단계는?','자료 확인 → 수업 설계 → 내용 초안 → 파일 만들기'],
     ['1단계','공문 정리에서 파일을 옮기기 전에 먼저 받는 것은?','폴더명 후보·파일 수·파일명을 정리한 계획 표. 확인할 수 없는 건 따로 표시하고, 아직 옮기지 않게 해요'],
-    ['2단계','프로젝트에 업무 기준을 저장해 두면 무엇이 좋을까?','매번 설명하지 않아도 같은 기준으로 일해요. "오늘 메시지 정리해 줘" 한마디면 끝'],
+    ['2단계','실습 4에서 실제 쿨메신저 메시지함은 어떻게 다뤘을까?','위치(Memo 폴더)만 확인하고, 실습에는 나눠 준 가상 .udb 파일만 썼어요'],
     ['2단계','실습 5에서 건 예약은?','매주 월요일 오전 8시, 지난주 교육 뉴스를 정리하는 주간 브리핑'],
     ['적용하기','내 첫 업무를 맡기는 문장 틀은?','"[자료]를 보고 [기준]에 따라 [결과물]을 만들어 줘."']
   ];
