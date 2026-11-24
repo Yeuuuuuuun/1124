@@ -292,6 +292,7 @@ main{padding-block:40px 120px;min-width:0;display:flex;flex-direction:column;gap
 <div class="shell">
 <nav class="toc" aria-label="목차">
   <div class="toc-head"><b>AI 업무 경감 연수</b><span>나는 기획하고, AI는 일한다</span></div>
+  <a href="#start"><span class="n">✓</span>시작 준비<span class="cnt" data-cnt="prep"></span></a>
   <a href="#intro"><span class="n">0</span>도입<span class="cnt" data-cnt="promise"></span></a>
   <a href="#step1"><span class="n">1</span>내 PC에서 일하게 하기<span class="cnt" data-cnt="work"></span></a>
   <a href="#step2"><span class="n">2</span>업무 매뉴얼로 반복 작업</a>
@@ -310,13 +311,32 @@ main{padding-block:40px 120px;min-width:0;display:flex;flex-direction:column;gap
   <h1>나는 기획하고,<br><em>AI는 일한다</em></h1>
   <p class="lead">오늘 여러분도 AI 직원을 한 명 뽑습니다. 실습 문장은 복사해서 그대로 붙여넣고, 연수가 끝난 뒤에는 프롬프트 모음과 복습 퀴즈로 다시 정리해 보세요.</p>
   <div class="legend"><span class="tag gpt">GPT 실습</span>직접 따라 해요 <span class="tag cl">클로드 시연</span>강사 화면을 지켜봐요 <span class="tag show">보여주기</span>사례를 봐요</div>
-  <div class="cta"><a class="btn pri" href="#get-files">실습 파일 받기</a><a class="btn" href="#prompts">프롬프트 모음</a><a class="btn" href="#review">복습 퀴즈</a><a class="btn" href="files/slides.pdf" download="AI 업무 경감 연수 자료.pdf">연수 자료 PDF</a></div>
+  <div class="cta"><a class="btn pri" href="#start">실습 파일 받기</a><a class="btn" href="#prompts">프롬프트 모음</a><a class="btn" href="#review">복습 퀴즈</a><a class="btn" href="files/slides.pdf" download="AI 업무 경감 연수 자료.pdf">연수 자료 PDF</a></div>
   <div class="jump">
     <a href="#step1"><span class="k">1단계 · 실습 1~3</span><b>내 PC에서 일하게 하기</b><span>누가기록 · 수업 지도안 · 공문 정리</span></a>
     <a href="#step2"><span class="k">2단계 · 실습 4~5</span><b>업무 매뉴얼로 반복 작업하기</b><span>메시지로 일정 정리 · 주간 브리핑 예약</span></a>
     <a href="#step3"><span class="k">3단계</span><b>AI로 필요한 도구 만들기</b><span>수업용 웹앱 사례</span></a>
   </div>
 </header>
+
+<!-- 시작 준비 -->
+<section class="chapter" id="start">
+  <div class="ch-head"><span class="k">BEFORE WE START</span><h2>시작 준비</h2><p>연수를 시작하기 전에 실습 파일을 받고 ChatGPT 앱을 설치해 주세요. 모두 끝나면 바로 도입으로 넘어가요.</p></div>
+  <div class="block get">
+    <header><h3>실습 파일 받기</h3><p class="sub">실습 폴더(누가기록·동료장학·공문·쿨메세지)와 ChatGPT 설치 파일이 한 번에 들어 있어요.</p></header>
+    <div class="dl">
+      <button class="btn pri" id="dlBtn" type="button" disabled>실습 파일 받기 (zip)</button>
+      <span class="dl-msg" id="dlMsg" role="status">다운로드를 준비하고 있어요…</span>
+    </div>
+    <div class="checks" data-group="prep">
+      <label class="check"><input type="checkbox" id="pp-1"><span><b>실습 파일(zip) 받기</b><small>버튼을 누르면 '다운로드' 폴더에 저장돼요</small></span></label>
+      <label class="check"><input type="checkbox" id="pp-2"><span><b>압축을 풀어 바탕화면에 두기</b><small>zip 파일을 마우스 오른쪽 단추로 누르고 '모두 압축 풀기' → 바탕화면에 '1124 실습' 폴더가 생겨요</small></span></label>
+      <label class="check"><input type="checkbox" id="pp-3"><span><b>ChatGPT 앱 설치하기</b><small>'1124 실습' 폴더의 ChatGPT Installer.exe를 두 번 눌러 설치해요</small></span></label>
+      <label class="check"><input type="checkbox" id="pp-4"><span><b>ChatGPT 앱에 로그인하기</b><small>내 계정으로 로그인해 두면 준비 끝이에요</small></span></label>
+    </div>
+    <div class="prog" data-prog="prep"><div class="bar"><i></i></div><span>0 / 4 준비 완료</span></div>
+  </div>
+</section>
 
 <!-- 도입 -->
 <section class="chapter" id="intro" data-ch="도입">
@@ -363,18 +383,6 @@ main{padding-block:40px 120px;min-width:0;display:flex;flex-direction:column;gap
     <div class="flow"><span>파일 받기</span><i>→</i><span>내 PC에서 일하게 하기</span></div>
     <figure class="shot narrow"><img src="img/chat-screen.png" alt="채팅 입력 화면" loading="lazy"></figure>
     <div class="tip"><b>예비 방법</b><span>폴더 연결이 안 되면 실습 파일을 채팅에 첨부해서 같은 작업을 하세요.</span></div>
-  </div>
-
-  <div class="block get" id="get-files">
-    <header><h3>실습 파일 받기</h3><p class="sub">실습에 쓰는 양식과 예시 파일을 한 번에 받아요. 연수 전에 미리 받아 두면 바로 시작할 수 있어요.</p></header>
-    <div class="dl">
-      <button class="btn pri" id="dlBtn" type="button" disabled>실습 파일 받기 (zip)</button>
-      <span class="dl-msg" id="dlMsg" role="status">다운로드를 준비하고 있어요…</span>
-    </div>
-    <div class="checks" data-group="prep">
-      <label class="check"><input type="checkbox" id="pp-1"><span><b>실습 파일(zip) 받기</b><small>저장 확인 창이 뜨면 '저장'을 눌러요</small></span></label>
-      <label class="check"><input type="checkbox" id="pp-2"><span><b>압축을 풀어 바탕화면에 두기</b><small>zip 파일을 마우스 오른쪽 단추로 누르고 '압축 풀기'</small></span></label>
-    </div>
   </div>
 
   <div class="block gpt">
